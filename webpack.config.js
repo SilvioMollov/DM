@@ -10,6 +10,9 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
+    host: '0.0.0.0',
+    useLocalIp: true,
+    port: 3000,
   },
   module: {
     rules: [

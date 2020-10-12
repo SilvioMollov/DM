@@ -6,6 +6,7 @@ body {
   background-color: rgb(216, 213, 213);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .body-wrapper {
@@ -19,6 +20,8 @@ body {
       width: 50%;
       margin: 0 auto;
       margin-bottom: 50px;
+      padding-bottom: 50px;
+      border-bottom: $red-color solid 3px;
 
       .log-header__text {
         margin: 0;
@@ -106,7 +109,6 @@ body {
       font-weight: 700;
       margin: 20px 0;
       padding: 20px 0;
-      border-radius: 20px;
       color: $darkgray-color;
 
       svg {
@@ -144,6 +146,7 @@ body {
       z-index: 100;
 
       .body-map {
+        border: $darkgray-color solid 1px;
       }
 
       .body-map__info {
@@ -184,6 +187,8 @@ body {
     .body-holder {
       padding: 10px 10px;
       .logo-header {
+        margin-bottom: 20px;
+        padding-bottom: 25px;
         width: 100%;
         z-index: 100;
         .log-header__text {
@@ -209,11 +214,11 @@ body {
           width: 100%;
 
           svg {
-              margin: 0;
+            margin: 0;
           }
 
           span {
-              padding-left: 10px;
+            padding-left: 10px;
           }
         }
       }
@@ -225,8 +230,12 @@ body {
         .body-map__info {
           font-size: 1em;
 
+          svg {
+          }
+
           a {
             padding-left: 10px;
+            text-decoration: underline;
           }
         }
       }
