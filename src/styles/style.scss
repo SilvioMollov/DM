@@ -1,18 +1,22 @@
+$red-color: #c7222c;
+$lightgray-color: #e1dfe0;
+$darkgray-color: #3f3f41;
+
 body {
   background-color: rgb(216, 213, 213);
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .body-wrapper {
-  padding: 0 50px;
-
   .body-holder {
+    position: relative;
     background-color: white;
     padding: 20px 50px;
 
     .logo-header {
       position: relative;
-      width: 60%;
+      width: 50%;
       margin: 0 auto;
       margin-bottom: 50px;
 
@@ -20,34 +24,211 @@ body {
         margin: 0;
         position: absolute;
         right: 0;
+        color: $darkgray-color;
+      }
+    }
+
+    .body-triangle__top_left {
+      .triangle__one {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 100px solid white;
+        border-right: 100px solid transparent;
+        z-index: 10;
+      }
+
+      .triangle__two {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 150px solid $red-color;
+        border-right: 150px solid transparent;
+        z-index: 9;
+      }
+
+      .triangle__three {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 200px solid $darkgray-color;
+        border-right: 200px solid transparent;
+        z-index: 8;
+      }
+    }
+
+    .body-triangle__bottom_right {
+      .triangle__one {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid white;
+        border-left: 100px solid transparent;
+        z-index: 10;
+      }
+
+      .triangle__two {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 150px solid $red-color;
+        border-left: 150px solid transparent;
+        z-index: 9;
+      }
+
+      .triangle__three {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 200px solid $darkgray-color;
+        border-left: 200px solid transparent;
+        z-index: 8;
       }
     }
 
     .body-services {
-      display: inline-block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       font-size: 2em;
-      font-weight: 1000;
+      font-weight: 700;
+      margin: 20px 0;
+      padding: 20px 0;
+      border-radius: 20px;
+      color: $darkgray-color;
+
+      svg {
+        margin: 0px auto;
+        color: $red-color;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+      }
 
       .body-services__one {
-        display: inline-block;
-
-        padding: 20px;
+        margin: 10px 20px;
       }
       .body-services__two {
-        display: inline-block;
-
-        padding: 20px;
+        margin: 10px 20px;
       }
       .body-services__three {
-        display: inline-block;
-
-        padding: 20px;
+        margin: 10px 20px;
       }
 
       .body-services__four {
-        display: inline-block;
+        margin: 10px 20px;
+      }
+    }
 
-        padding: 20px;
+    .body-map__holder {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px;
+      z-index: 100;
+
+      .body-map {
+      }
+
+      .body-map__info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        svg {
+          color: $red-color;
+        }
+
+        a {
+          text-decoration: none;
+          color: $darkgray-color;
+        }
+
+        a:hover {
+          color: $red-color;
+        }
+
+        div {
+          margin: 20px 0;
+          font-size: 1em;
+          font-weight: 700;
+        }
+
+        .body-map__info__location {
+        }
+        .body-map__info__telephone {
+        }
+        .body-map__info__email {
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .body-holder {
+      padding: 10px 10px;
+      .logo-header {
+        width: 100%;
+        z-index: 100;
+        .log-header__text {
+          font-size: 1em;
+        }
+      }
+
+      .body-triangle__top_left {
+        opacity: 50%;
+      }
+
+      .body-triangle__bottom_right {
+        opacity: 50%;
+      }
+
+      .body-services {
+        padding: 0;
+        font-size: 1em;
+        flex-direction: column;
+
+        div {
+          flex-direction: row;
+          width: 100%;
+
+          svg {
+              margin: 0;
+          }
+
+          span {
+              padding-left: 10px;
+          }
+        }
+      }
+
+      .body-map__holder {
+        iframe {
+          width: 100%;
+        }
+        .body-map__info {
+          font-size: 1em;
+
+          a {
+            padding-left: 10px;
+          }
+        }
       }
     }
   }
