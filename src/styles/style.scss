@@ -7,240 +7,275 @@ body {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  height: 100vh;
 }
 
-.body-wrapper {
-  .body-holder {
+.body-holder {
+  position: relative;
+  background-color: white;
+  padding: 20px 50px;
+  min-height: 100vh;
+  .logo-header {
     position: relative;
-    background-color: white;
-    padding: 20px 50px;
-
-    .logo-header {
-      position: relative;
-      width: 50%;
-      margin: 0 auto;
-      margin-bottom: 50px;
-      padding-bottom: 50px;
-      border-bottom: $red-color solid 3px;
-
-      .log-header__text {
-        margin: 0;
-        position: absolute;
-        right: 0;
-        color: $darkgray-color;
-      }
-    }
-
-    .body-triangle__top_left {
-      .triangle__one {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 100px solid white;
-        border-right: 100px solid transparent;
-        z-index: 10;
-      }
-
-      .triangle__two {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 150px solid $red-color;
-        border-right: 150px solid transparent;
-        z-index: 9;
-      }
-
-      .triangle__three {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 200px solid $darkgray-color;
-        border-right: 200px solid transparent;
-        z-index: 8;
-      }
-    }
-
-    .body-triangle__bottom_right {
-      .triangle__one {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-bottom: 100px solid white;
-        border-left: 100px solid transparent;
-        z-index: 10;
-      }
-
-      .triangle__two {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-bottom: 150px solid $red-color;
-        border-left: 150px solid transparent;
-        z-index: 9;
-      }
-
-      .triangle__three {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-bottom: 200px solid $darkgray-color;
-        border-left: 200px solid transparent;
-        z-index: 8;
-      }
-    }
-
-    .body-services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      font-size: 2em;
-      font-weight: 700;
-      margin: 20px 0;
-      padding: 20px 0;
+    width: 50%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    .log-header__text {
+      margin: 0;
+      position: absolute;
+      right: -70px;
+      bottom: -32px;
       color: $darkgray-color;
+    }
+  }
+
+  .body-triangle__top_left {
+    .triangle__one {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 100px solid white;
+      border-right: 100px solid transparent;
+      z-index: 10;
+    }
+
+    .triangle__two {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 150px solid $red-color;
+      border-right: 150px solid transparent;
+      z-index: 9;
+    }
+
+    .triangle__three {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 200px solid $darkgray-color;
+      border-right: 200px solid transparent;
+      z-index: 8;
+    }
+  }
+
+  .body-triangle__bottom_right {
+    .triangle__one {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid white;
+      border-left: 100px solid transparent;
+      z-index: 10;
+    }
+
+    .triangle__two {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 150px solid $red-color;
+      border-left: 150px solid transparent;
+      z-index: 9;
+    }
+
+    .triangle__three {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 200px solid $darkgray-color;
+      border-left: 200px solid transparent;
+      z-index: 8;
+    }
+  }
+
+  .body-services {
+    display: flex;
+    flex-flow: row wrap;
+    border-top: $red-color solid 3px;
+    border-bottom: $red-color solid 3px;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 2vh auto;
+    padding: 20px 0;
+    color: $darkgray-color;
+    max-width: 1500px;
+
+    svg {
+      font-size: 40px;
+      margin: 0px auto;
+      color: white;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      padding: 20px 10px;
+      border: $red-color solid 1px;
+      color: white;
+      border-radius: 25px;
+      background-color: $red-color;
+      // box-shadow: 23px 22px 40px 0px rgba(0, 0, 0, 0.59);
+      margin: 10px 10px;
+    }
+  }
+
+  .body-map__holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    z-index: 100;
+    max-width: 1500px;
+
+    .body-map {
+      width: 50%;
+
+      max-width: 500px;
+      padding: 0 10px;
+      iframe {
+        width: 100%;
+        border: #3f3f41 solid 1px;
+      }
+    }
+
+    .body-map__info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      max-width: 500px;
+      padding: 10px 10px;
 
       svg {
-        margin: 0px auto;
+        margin-right: 15px;
+        color: $red-color;
+        float: left;
+        font-size: 24px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $darkgray-color;
+        overflow: hidden;
+        display: flex;
+      }
+
+      a:hover {
         color: $red-color;
       }
 
       div {
+        margin: 20px 0;
+        font-size: 1em;
+        font-weight: 700;
         display: flex;
-        flex-direction: column;
-        width: 500px;
-        padding-bottom: 30px;
+        align-items: center;
       }
 
-      .body-services__one {
-        margin: 10px 20px;
+      .body-map__info__location {
       }
-      .body-services__two {
-        margin: 10px 20px;
+      .body-map__info__telephone {
       }
-      .body-services__three {
-        margin: 10px 20px;
+      .body-map__info__email {
       }
+    }
+  }
+}
 
-      .body-services__four {
-        margin: 10px 20px;
+@media (max-width: 750px) {
+  .body-holder {
+    padding: 10px 10px;
+    .logo-header {
+      margin-bottom: 30px;
+      width: 100%;
+      z-index: 100;
+      .log-header__text {
+        font-size: 1.2em;
+        right: 0;
+        bottom: -20px;
+      }
+    }
+
+    .body-triangle__top_left {
+      opacity: 50%;
+    }
+
+    .body-triangle__bottom_right {
+      opacity: 50%;
+    }
+
+    .body-services {
+      padding: 10px 10px;
+      font-size: 1em;
+      flex-direction: column;
+
+      div {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0;
+        padding: 5px 0;
+
+        span {
+          font-size: 1.1em;
+        }
+
+        svg {
+          margin: 0;
+          padding: 0 15px;
+
+          font-size: 28px;
+        }
       }
     }
 
     .body-map__holder {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 20px;
-      z-index: 100;
-
-      .body-map {
-        border: $darkgray-color solid 1px;
+      padding: 10px 15px;
+      iframe {
+        width: 100%;
       }
 
+      .body-map {
+        width: 100%;
+        margin: 0;
+      }
       .body-map__info {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
+        font-size: 1em;
+        width: 80%;
 
         svg {
-          color: $red-color;
+          font-size: 26px;
         }
 
         a {
-          text-decoration: none;
-          color: $darkgray-color;
-        }
-
-        a:hover {
-          color: $red-color;
-        }
-
-        div {
-          margin: 20px 0;
-          font-size: 1em;
-          font-weight: 700;
-        }
-
-        .body-map__info__location {
-        }
-        .body-map__info__telephone {
-        }
-        .body-map__info__email {
+          font-size: 1.1em;
+          padding-left: 10px;
+          text-decoration: underline;
         }
       }
     }
   }
+}
 
-  @media (max-width: 600px) {
-    .body-holder {
-      padding: 10px 10px;
-      .logo-header {
-        margin-bottom: 20px;
-        padding-bottom: 25px;
-        width: 100%;
-        z-index: 100;
-        .log-header__text {
-          font-size: 1em;
-        }
-      }
-
-      .body-triangle__top_left {
-        opacity: 50%;
-      }
-
-      .body-triangle__bottom_right {
-        opacity: 50%;
-      }
-
-      .body-services {
-        padding: 0;
-        font-size: 1em;
-        flex-direction: column;
-
-        div {
-          flex-direction: row;
-          width: 100%;
-          padding-bottom: 0;
-
-          svg {
-            margin: 0;
-          }
-
-          span {
-            padding-left: 10px;
-          }
-        }
-      }
-
-      .body-map__holder {
-        iframe {
-          width: 100%;
-        }
-        .body-map__info {
-          font-size: 1em;
-
-          svg {
-          }
-
-          a {
-            padding-left: 10px;
-            text-decoration: underline;
-          }
-        }
-      }
+@media (min-width: 1100px) {
+  .body-holder {
+    .body-services {
+      flex-flow: nowrap;
     }
   }
 }
