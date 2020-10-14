@@ -10,7 +10,7 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     useLocalIp: true,
     port: 3000,
   },
@@ -31,9 +31,17 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      // {
+      //   test: /\.(eot|svg|ttf|woff|woff2?)$/,
+      //   use: {
+      //     loader: "file-loader",
+      //   },
+      // },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(eot|png|svg|ttf|woff|woff2|jpg|gif|ico)$/,
+        use: {
+          loader: "file-loader",
+        },
       },
     ],
   },

@@ -108,8 +108,8 @@ body {
     justify-content: center;
     font-size: 1.5em;
     font-weight: 700;
-    margin: 2vh auto;
-    padding: 20px 0;
+    margin: 20px auto;
+    padding: 20px 10px;
     color: $darkgray-color;
     max-width: 1500px;
 
@@ -122,14 +122,14 @@ body {
     div {
       display: flex;
       flex-direction: column;
-      width: 40%;
+      width: 45%;
       padding: 20px 10px;
       border: $red-color solid 1px;
       color: white;
       border-radius: 25px;
       background-color: $red-color;
       // box-shadow: 23px 22px 40px 0px rgba(0, 0, 0, 0.59);
-      margin: 10px 10px;
+      margin: 10px;
     }
   }
 
@@ -141,12 +141,12 @@ body {
     margin: 20px auto;
     z-index: 100;
     max-width: 1500px;
+    padding:  0 10px;
 
     .body-map {
-      width: 50%;
+      width: calc(50% - 20px);
 
-      max-width: 500px;
-      padding: 0 10px;
+      padding: 10px;
       iframe {
         width: 100%;
         border: #3f3f41 solid 1px;
@@ -154,12 +154,11 @@ body {
     }
 
     .body-map__info {
-      width: 50%;
+      width: calc(50% - 20px);
       display: flex;
       flex-direction: column;
       text-align: left;
-      max-width: 500px;
-      padding: 10px 10px;
+      padding: 10px;
 
       svg {
         margin-right: 15px;
@@ -173,6 +172,10 @@ body {
         color: $darkgray-color;
         overflow: hidden;
         display: flex;
+      }
+
+      span {
+        display: inline-block;
       }
 
       a:hover {
@@ -245,7 +248,7 @@ body {
     }
 
     .body-map__holder {
-      padding: 10px 15px;
+      padding: 10px 10px;
       iframe {
         width: 100%;
       }
@@ -253,6 +256,7 @@ body {
       .body-map {
         width: 100%;
         margin: 0;
+        padding: 0;
       }
       .body-map__info {
         font-size: 1em;

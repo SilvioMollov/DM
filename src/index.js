@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/js/solid";
 import "@fortawesome/fontawesome-free/js/regular";
 import "@fortawesome/fontawesome-free/js/brands";
 import "./styles/style.scss";
+import "./favicon.ico";
 
 // function component() {
 //   const element = document.createElement("div");
