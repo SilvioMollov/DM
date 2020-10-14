@@ -14,7 +14,7 @@ body {
   position: relative;
   background-color: white;
   padding: 20px 50px;
-  min-height: 100vh;
+  min-height: calc(100vh - 3.7%);
   .logo-header {
     position: relative;
     width: 50%;
@@ -141,7 +141,7 @@ body {
     margin: 20px auto;
     z-index: 100;
     max-width: 1500px;
-    padding:  0 10px;
+    padding: 0 10px;
 
     .body-map {
       width: calc(50% - 20px);
@@ -172,6 +172,7 @@ body {
         color: $darkgray-color;
         overflow: hidden;
         display: flex;
+        cursor: pointer;
       }
 
       span {
