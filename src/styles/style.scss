@@ -15,12 +15,14 @@ body {
   background-color: white;
   padding: 20px 50px;
   min-height: calc(100vh - 40px);
+
   .logo-header {
     position: relative;
     width: 50%;
     max-width: 700px;
     margin: 0 auto;
     margin-bottom: 45px;
+
     .log-header__text {
       margin: 0;
       position: absolute;
@@ -120,9 +122,10 @@ body {
     }
 
     div {
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      min-width: 350px;
+      width: calc(50% - 20px);
       padding: 20px 10px;
       border: $red-color solid 1px;
       color: white;
@@ -134,6 +137,7 @@ body {
   }
 
   .body-map__holder {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,7 +148,8 @@ body {
     padding: 0 10px;
 
     .body-map {
-      width: calc(50% - 20px);
+      box-sizing: border-box;
+      width: 50%;
 
       padding: 10px;
       iframe {
@@ -154,7 +159,8 @@ body {
     }
 
     .body-map__info {
-      width: calc(50% - 20px);
+      box-sizing: border-box;
+      width: 50%;
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -196,6 +202,28 @@ body {
       .body-map__info__telephone {
       }
       .body-map__info__email {
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .body-holder {
+    .body-services {
+      flex-flow: nowrap;
+      div {
+        width: 25%;
+        min-width: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .body-holder {
+    .body-services {
+      div {
+        width: 100%;
       }
     }
   }
@@ -272,18 +300,6 @@ body {
           padding-left: 10px;
           text-decoration: underline;
         }
-      }
-    }
-  }
-}
-
-@media (min-width: 1100px) {
-  .body-holder {
-    .body-services {
-      flex-flow: nowrap;
-      div {
-        width: 45%;
-        min-width: 0;
       }
     }
   }
