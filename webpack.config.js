@@ -1,11 +1,28 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  //   mode: "development",
+  mode: "development",
   entry: "./src/index.js",
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+    }),
+    new FaviconsWebpackPlugin("src/favicon.ico"),
+  ],
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+    host: "0.0.0.0",
+    useLocalIp: true,
+    port: 3000,
   },
   module: {
     rules: [
@@ -25,8 +42,14 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(eot|png|svg|ttf|woff|woff2|jpg|gif|ico)$/,
+        use: {
+          loader: "file-loader",
+        },
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
     ],
   },
